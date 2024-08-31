@@ -1,13 +1,136 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&display=swap");
+
+/* Global styles */
+* {
+  font-family: "Aclonica", sans-serif; /* Uniform font for the entire document */
+  font-weight: 400; /* Normal font weight for readability */
+  font-style: normal; /* Default font style */
+  box-sizing: border-box; /* Border and padding included in width/height calculations */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Root element styles */
+html,
+body {
+  height: 100%; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+}
+
+/* Main container styling */
+.app-container {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  justify-content: flex-start; /* Align children to start of main axis */
+  min-height: 100vh; /* Minimum height of the viewport */
+  padding: 30px; /* Spacing inside container */
+  background: linear-gradient(
+    to left,
+    #7e579c,
+    #080808
+  ); /* Gradient background from purple to black */
+}
+
+/* Header styling */
+.header-container {
+  width: 100%; /* Full width of its container */
+  display: flex;
+  flex-direction: column; /* Vertical stacking */
+  align-items: center; /* Horizontal centering */
+  justify-content: space-around; /* Even distribution with space around items */
+  gap: 20px; /* Space between children */
+  padding: 20px; /* Padding around content */
+  margin-bottom: 20px; /* Space below the header */
+  background: linear-gradient(
+    to left,
+    #7e579c,
+    #080808
+  ); /* Background gradient */
+  border-radius: 15px; /* Rounded corners */
+  color: #f0e6e6; /* Light text color for contrast */
+  font-size: 28px; /* Text size */
+  -webkit-text-stroke: 0.9px black; /* Subtle text outline for readability */
+}
+
+/* Header text alignment */
+.header-container h1,
+.header-container p {
+  text-align: center; /* Center text horizontally */
+}
+
+/* Gallery container for images */
+.imgGal {
+  display: flex;
+  flex-wrap: wrap; /* Allow multiple lines */
+  justify-content: center; /* Center images horizontally */
+  gap: 20px; /* Space between images */
+  margin: 20px 0; /* Vertical margin */
+  padding: 10px; /* Padding around images */
+  border-radius: 25px; /* Rounded corners for the gallery */
+  background-color: #ffffff; /* White background for contrast */
+}
+
+/* Image styling */
+.imgGal img {
+  width: 300px; /* Fixed width */
+  height: 300px; /* Fixed height */
+  object-fit: cover; /* Ensure images cover the space without distortion */
+  border-radius: 15px; /* Rounded corners on images */
+  transition: transform 0.3s, border-color 0.3s; /* Smooth transitions for scale and border color */
+  border: 8px solid #ffffff; /* White border */
+}
+
+/* Hover effect for images */
+.imgGal img:hover {
+  transform: scale(1.1); /* Enlarge image */
+  border-color: #ffc5f4; /* Change border color on hover */
+}
+
+/* Footer styling */
+.footer-container {
+  width: 100%; /* Full width of its container */
+  padding: 20px; /* Padding inside the footer */
+  border-radius: 15px; /* Rounded corners */
+  color: #f0e6e6; /* Light text color for readability */
+  text-align: center; /* Center text horizontally */
+  font-size: 38px; /* Large text size for visibility */
+  background: linear-gradient(
+    to left,
+    #7e579c,
+    #080808
+  ); /* Background gradient */
+  -webkit-text-stroke: 1.5px black; /* Text outline for emphasis */
+}
+
+/* Button styling */
+.btn {
+  padding: 15px 20px; /* Button padding */
+  border-radius: 50px; /* Fully rounded edges */
+  background-color: #f0f0f0; /* Light background color */
+  color: #000; /* Dark text for contrast */
+  font-size: 2rem; /* Large font size for easy interaction */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for background and shadow */
+  margin-bottom: 20px; /* Space below the button */
+}
+
+/* Button hover effect */
+.btn:hover {
+  background-color: #ffc5f4; /* Light pink background on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Dropdown styling */
+select {
+  padding: 8px; /* Padding inside dropdown */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f0f0f0; /* Light background color */
+  border: 2px solid #480627; /* Solid border */
+  font-size: 1rem; /* Standard font size */
+  color: #000; /* Dark text color for readability */
+}
+
+/* Focus effect on dropdown */
+select:focus {
+  border-color: #ed8bbc; /* Pink border on focus */
+  outline: none; /* Remove default focus outline */
 }
